@@ -1,0 +1,335 @@
+// Кнопка открывашка
+
+.menu-opener {
+  cursor: pointer;
+  width: 4rem;
+  height: 4rem;
+  position: absolute;
+  top: 45px;
+  right:15px;
+  user-select: none;
+}
+
+.menu-opener-inner {
+  background: #000;
+  height: .5rem;
+  margin-left: .75rem;
+  margin-top: 1.75rem;
+  width: 2.5rem;
+
+  &::before,
+  &::after {
+    background: #000;
+    content: '';
+    display: block;
+    height: .5rem;
+    width: 2.5rem;
+  }
+  &::before {
+    transform: translateY(-.75rem);
+  }
+  &::after {
+    transform: translateY(.25rem);
+  }
+  &.active {
+    background: transparent;
+    &::before {
+      transform: translateY(0rem) rotate(-45deg);
+    }
+    &::after {
+      transform: translateY(-.5rem) translateX(-0rem) rotate(45deg)
+    }
+  }
+}
+.menu-opener,
+.menu-opener:hover,
+.menu-opener.active,
+.menu-opener-inner,
+.menu-opener-inner::before,
+.menu-opener-inner::after,
+.menu, .menu.active {
+  -webkit-transition: 250ms all;
+  transition: 250ms all;
+}
+// Конец кнопки открывашка
+
+
+// Эффекты на картинках
+
+// Картинка
+figure.blogs__item img {
+  max-width: 100%;
+  backface-visibility: hidden;
+  vertical-align: top;
+  filter: grayscale(100%);
+}
+// Название на картинке
+figure.blogs__item .title {
+  position: absolute;
+  top: 58%;
+  left: 40px;
+  padding: 15px 15px;
+}
+
+// Горизонтальные полосы
+figure.blogs__item .title:before,
+figure.blogs__item .title:after {
+  height: 2px;
+  width: 400px;
+  position: absolute;
+  content: '';
+  background-color: #ffffff;
+}
+// Появление горизонтальных полос
+figure.blogs__item .title:before {
+  top: 0;
+  left: 15px;
+  transform: translateX(100%);
+}
+figure.blogs__item .title:after {
+  bottom: 0;
+  right: 15px;
+  transform: translateX(-100%);
+}
+
+// Вертикальные полосы
+
+figure.blogs__item .title div:before,
+figure.blogs__item .title div:after {
+  width: 2px;
+  height: 300px;
+  position: absolute;
+  content: '';
+  background-color: #ffffff;
+}
+// Появление вертикальных полос
+figure.blogs__item .title div:before {
+  top: 15px;
+  right: 0;
+  transform: translateY(100%);
+}
+figure.blogs__item .title div:after {
+  bottom: 15px;
+  left: 0;
+  transform: translateY(-100%);
+}
+// Стили для названия
+figure.blogs__item h2,
+figure.blogs__item h4 {
+  margin: 0;
+  text-transform: uppercase;
+}
+figure.blogs__item h2 {
+  font-weight: 400;
+}
+figure.blogs__item h4 {
+  display: block;
+  font-weight: 400;
+  padding: 10px 10px 0px;
+}
+// Стили для текста
+figure.blogs__item figcaption {
+  position: absolute;
+  bottom: 42%;
+  left: 45px;
+  text-align: left;
+  opacity: 0;
+  padding: 5px 55px 10px 10px;
+  font-size: 0.8rem;
+  font-weight: 400;
+  line-height: 20px;
+  font-family: "Arial";
+
+}
+figure.blogs__item figcaption p {
+  margin: 0;
+  background: rgba( 0, 0, 0, 0.4);
+
+  padding: 0 5px;
+}
+// Вся картинка - ссылка
+figure.blogs__item a {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+// Наведение на картинку
+figure.blogs__item:hover img,
+figure.blogs__item.hover img {
+  zoom: 1;
+  filter: none;
+  opacity: 0.8;
+
+
+}
+// Появление полос
+
+figure.blogs__item:hover .title:before,
+figure.blogs__item.hover .title:before,
+figure.blogs__item:hover .title:after,
+figure.blogs__item.hover .title:after,
+figure.blogs__item:hover .title div:before,
+figure.blogs__item.hover .title div:before,
+figure.blogs__item:hover .title div:after,
+figure.blogs__item.hover .title div:after {
+  transform: translate(0, 0);
+}
+figure.blogs__item:hover .title:before,
+figure.blogs__item.hover .title:before,
+figure.blogs__item:hover .title:after,
+figure.blogs__item.hover .title:after {
+  transition-delay: 0.15s;
+}
+figure.blogs__item:hover figcaption,
+figure.blogs__item.hover figcaption {
+  opacity: 1;
+  transition-delay: 0.2s;
+}
+
+// Треугольники
+.triangle{
+       border: 8px solid transparent;
+       border-top-width: 7px;
+       border-bottom-width: 7px;
+       border-left-color: #c2c2c2;
+       position: absolute;
+       width: 0;
+       height: 0;
+
+}
+
+// Форма
+.send-message
+input[type=text],
+input[type=email]{
+    display: block;
+    width: 260px;
+    padding: 0 35px;
+    margin-bottom: 20px;
+    box-sizing: border-box;
+    outline: none;
+    border:1px solid #d6d6d6;
+    background-color: #f2f2f2;
+    font-family: "Arial";
+    font-size: 1rem;
+    line-height: 45px;
+    color:#636060;
+}
+.send-message input[type=text]::placeholder,
+.send-message input[type=email]::placeholder{
+    font-size: 0.85rem;
+    color:#888787;
+}
+.send-message textarea{
+    display: block;
+    margin-bottom: 20px;
+    padding: 17px 35px;
+    outline: none;
+    box-sizing: border-box;
+    border:1px solid #d6d6d6;
+    background-color: #f2f2f2;
+    font-family: "Arial";
+    font-size: 1rem;
+    color:#636060;
+}
+.send-message textarea::placeholder{
+    font-size: 0.85rem;
+    color:#888787;
+}
+.send-message input[type=submit]{
+    display: block;
+    width: 190px;
+    outline: none;
+    border:none;
+    background-color: #000;
+    font-family: 'Yanone Kaffeesatz', sans-serif;
+    font-size: 1.125rem;
+    text-transform: uppercase;
+    line-height: 45px;
+    color:#fff;
+    &:hover{
+        background-color: @bluecolor;
+    }
+}
+// Вторая форма
+
+.sub-message input[type=email]{
+    width: 385px;
+    margin-bottom: 30px;
+}
+.sub-message input[type=email]::placeholder{
+    font-size: 0.85rem;
+    color:#888787;
+}
+.sub-message input[type=submit]{
+    display: block;
+    width: 190px;
+    outline: none;
+    border:none;
+    background-color: #000;
+    font-family: 'Yanone Kaffeesatz', sans-serif;
+    font-size: 1.125rem;
+    text-transform: uppercase;
+    line-height: 45px;
+    color:#fff;
+    margin: 0 auto;
+    &:hover{
+        background-color: @bluecolor;
+    }
+}
+// Кнопка открывашка для футера
+
+.menu-opener-footer {
+  cursor: pointer;
+  width: 4rem;
+  height: 4rem;
+  position: absolute;
+  top: 70px;
+  right:15px;
+  user-select: none;
+}
+
+.menu-opener-inner-footer {
+  background: #fff;
+  height: .5rem;
+  margin-left: .75rem;
+  margin-top: 1.75rem;
+  width: 2.5rem;
+
+  &::before,
+  &::after {
+    background: #fff;
+    content: '';
+    display: block;
+    height: .5rem;
+    width: 2.5rem;
+  }
+  &::before {
+    transform: translateY(-.75rem);
+  }
+  &::after {
+    transform: translateY(.25rem);
+  }
+  &.active {
+    background: transparent;
+    &::before {
+      transform: translateY(0rem) rotate(-45deg);
+    }
+    &::after {
+      transform: translateY(-.5rem) translateX(-0rem) rotate(45deg)
+    }
+  }
+}
+.menu-opener-footer,
+.menu-opener-footer:hover,
+.menu-opener-footer.active,
+.menu-opener-inner-footer,
+.menu-opener-inner-footer::before,
+.menu-opener-inner-footer::after,
+.menu-footer, .menu-footer.active {
+  -webkit-transition: 250ms all;
+  transition: 250ms all;
+}
+// Конец кнопки открывашка

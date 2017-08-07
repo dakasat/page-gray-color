@@ -1,0 +1,381 @@
+main{
+    padding-bottom: 205px;
+}
+.main__box{
+    width: 100%;
+    height: 100%;
+    position: relative;
+    &::after{
+    content: "";
+    background-color: #e5e5e3;
+    background-image: url(../img/background.jpg);
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+     opacity: 0.25;
+     top: 0;
+     left: 0;
+     bottom: 0;
+     right: 0;
+     position: absolute;
+     z-index: -1;
+          }
+      }
+.collection{
+
+    &__blogs{
+    position: relative;
+    margin: 0 -0.8% 0 -0.8%;
+    margin-top: 30px;
+    display: flex;
+    align-content: space-between;
+    justify-content: center;
+    align-content: center;
+    flex-wrap: wrap;
+    }
+}
+.collection{
+    &__info{
+        display: block;
+        max-width: 1195px;
+        width: 100%;
+        text-align: center;
+        margin: 15px 0 30px 0;
+        padding: 70px 280px;
+        border:5px solid #e5e5e3;
+        box-sizing: border-box;
+        background-color: rgba(255,255,255, 0.5);
+        filter: grayscale(100%);
+        &:hover{
+                filter: none;
+                  border-color: #275c9d;
+              }
+
+    &-title{
+    font-size: 1.75rem;
+    line-height: 1.875rem;
+    padding-bottom: 30px;
+    }
+
+    &-text{
+        padding-bottom: 50px;
+        font-family: Arial;
+        font-size: 1.12rem;
+        line-height: 1.5rem;
+    }
+    &-btn{
+        display: block;
+        margin: 0 auto;
+        width: 190px;
+        padding: 18px 0;
+        background-color: #000;
+        color:#fff;
+        text-decoration: none;
+        text-transform: uppercase;
+        &:hover{
+            background-color:@bluecolor;}
+    }
+
+}
+}
+
+// Общий блок картинки
+figure.blogs__item {
+  position: relative;
+  overflow: hidden;
+  max-width: 276px;
+  width: 100%;
+  height: 276px;
+  margin: 0 0.8% 1.6% 0.8%;
+  border:5px solid #e5e5e3;
+  box-sizing: border-box;
+  cursor: pointer;
+  text-align: center;
+  font-size: 1rem;
+  color: #ffffff;
+  &:hover{
+       border-color: #275c9d;
+  }
+}
+figure.blogs__item *,
+figure.blogs__item *:before,
+figure.blogs__item *:after {
+  box-sizing: border-box;
+  transition: all 0.55s ease;
+}
+
+// Секция new-post
+
+.new-post{
+    &__container{
+    float: left;
+    max-width: 865px;
+    width: 100%;
+    padding: 45px 30px 75px 30px;
+    margin-bottom: 30px;
+    background-color: rgba(255,255,255, 0.5);
+    box-sizing: border-box;
+    border:5px solid #e5e5e3;
+    filter: grayscale(100%);
+    &:hover{
+            filter: none;
+              border-color: #275c9d;
+        }
+
+    }
+    &__header{
+        display: inline-block;
+        padding-bottom: 30px;
+        font-family: "Arial";
+        font-size: 0.875rem;
+        color:#989b9f;
+
+    &-name{
+        padding-right: 35px;
+        }
+    &-date{
+        padding-right: 210px;
+        }
+    &-time{
+        span{
+            display: inline-block;
+            .sprite(@s-flag);
+            margin-left: 10px;
+                }
+        }
+    }
+    &__content{
+        float: left;
+        &-title{
+            font-size: 1.75rem;
+            padding-bottom: 25px;
+        }
+        &-wrapper{
+            float: left;
+        }
+        &-foto {
+            float:left;
+        img{
+            max-width: 205px;
+            height: 205px;
+            border:5px solid #e5e5e3;
+            box-sizing: border-box;
+            margin-bottom: 15px;
+            }
+        figcaption{
+            padding-left: 10px;
+            font-family: "Arial";
+            font-size: 0.75rem;
+            color:#6c6e72;
+            }
+        }
+        &-text-wrapper{
+            float:left;
+            display: block;
+            max-width: 385px;
+            width: 100%;
+            margin-left: 30px;
+            box-sizing: border-box;
+        }
+        &-desr{
+            padding-bottom: 30px;
+            font-family: "Arial";
+            line-height: 24px;
+        }
+        &-text{
+            font-family: "Arial";
+            line-height: 24px;
+            color:#636060;
+        }
+    }
+    &__author{
+        display: inline-block;
+        float: right;
+        margin-right: 40px;
+        &-foto{
+            text-align: center;
+            span{
+                font-size: 1.25rem;
+            }
+        }
+        &-name{
+            display:block;
+            font-family: "Arial";
+            font-size: 1rem !important;
+            color:#e6618c;
+            margin-bottom: 20px;
+        }
+    }
+    &__author-social{
+        display: block;
+        margin: 0 auto;
+
+        ul{
+            margin-top: 60px;
+        }
+        li{
+            display: block;
+            margin-bottom: 10px;
+            text-align: center;
+        }
+    }
+}
+.author-social-m{
+    display: inline-block;
+    .sprite(@s-p-mail);
+
+}
+.author-social-fb{
+    display: inline-block;
+    .sprite(@s-p-fb);
+}
+.author-social-tw{
+    display: inline-block;
+    .sprite(@s-p-tw);
+}
+.author-social-g{
+    display: inline-block;
+    .sprite(@s-p-gp);
+}
+// Блок категории
+.categories{
+    display: inline-block;
+    float: right;
+    max-width: 260px;
+    width: 100%;
+    border:5px solid #e5e5e3;
+    margin-left: 35px;
+    padding: 50px 30px;
+    box-sizing: border-box;
+    text-align: center;
+    filter: grayscale(100%);
+    &:hover{
+            filter: none;
+              border-color: #275c9d;
+    }
+    &__title{
+        display: inline-block;
+        padding-bottom: 35px;
+        font-size: 1.25rem;
+    }
+    &__list{
+        text-align: left;
+        a{
+            color:@bluecolor;
+            text-decoration: none;
+
+            &:hover .triangle{
+            transform: rotate(90deg);
+            // transition-duration: 0.3s;
+            }
+        }
+
+        li{
+            margin-bottom: 25px;
+            margin-left: 30px;
+            font-family: "Arial";
+            font-size: 0.8rem;
+        }
+    }
+}
+.archive{
+    margin-top: -30px;
+}
+// Секция contact
+
+.contact{
+    &__wrapper{
+        float: left;
+    max-width: 565px;
+    width: 100%;
+    padding: 50px 30px;
+    box-sizing: border-box;
+    background-color: rgba(255,255,255, 0.5);
+    border:5px solid #e5e5e3;
+    filter: grayscale(100%);
+    &:hover{
+            filter: none;
+              border-color: #275c9d;
+        }
+    }
+    &__title{
+        display: inline-block;
+        font-size: 1.75rem;
+        margin-bottom: 25px;
+    }
+    &__text{
+        max-width: 385px;
+        width: 100%;
+        margin-bottom: 25px;
+        font-family: "Arial";
+        font-size: 0.875rem;
+        line-height: 24px;
+        color:#636060;
+    }
+}
+// Блок случайный пост
+
+.random-post{
+    display: block;
+    float: left;
+    max-width: 265px;
+    width: 100%;
+    padding: 50px 20px;
+    box-sizing: border-box;
+    margin-left: 35px;
+    border:5px solid #e5e5e3;
+    background-color: rgba(255,255,255, 0.5);
+    filter: grayscale(100%);
+    &:hover{
+            filter: none;
+              border-color: #275c9d;
+        }
+}
+.random-post-right{
+    float: right;
+}
+.random-post__title{
+    display: inline-block;
+    font-size: 1.75rem;
+    margin-bottom: 20px;
+}
+.random-post__img{
+    border:5px solid #e5e5e3;
+    margin-bottom: 20px;
+
+}
+.random-post__text{
+    font-size: 1.25rem;
+}
+.sub__wrapper{
+    float: right;
+    display: block;
+    max-width: 565px;
+    width: 100%;
+    padding: 50px 85px;
+    box-sizing: border-box;
+    margin-top: 50px;
+    margin-bottom: 75px;
+    text-align: center;
+    background-color: rgba(255,255,255, 0.5);
+    border:5px solid #e5e5e3;
+    filter: grayscale(100%);
+    &:hover{
+            filter: none;
+              border-color: #275c9d;
+          }
+}
+.sub__title{
+    display: inline-block;
+    font-size: 1.75rem;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+}
+.sub__text{
+    font-size: 1.75rem;
+    margin-bottom: 35px;
+}
+.categories-mobile{
+    display: none;
+}
